@@ -46,11 +46,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('AZURE_MYSQL_HOST', 'msdocs-laravel-mysql-1024369-server.mysql.database.azure.com'),
+            'host' => env('AZURE_MYSQL_HOST', '127.0.0.1'),
             'port' => env('AZURE_MYSQL_PORT', '3306'),
-            'database' => env('AZURE_MYSQL_DBNAME', 'msdocs-laravel-mysql-1024369-database'),
-            'username' => env('AZURE_MYSQL_USERNAME', 'blaxmvyqen'),
-            'password' => env('AZURE_MYSQL_PASSWORD', '@Microsoft.KeyVault(SecretUri=https://keyvault1024369.vault.azure.net/secrets/azure-mysql-password-86872/2aa926e17d7141629f735d3a5228f12b)'),
+            'database' => env('AZURE_MYSQL_DBNAME', 'forge'),
+            'username' => env('AZURE_MYSQL_USERNAME', 'forge'),
+            'password' => env('AZURE_MYSQL_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
@@ -139,11 +139,11 @@ return [
 
         'cache' => [
             'url' => env('REDIS_URL'),
-            'host' => env('AZURE_REDIS_HOST', 'msdocs-laravel-mysql-1024369-cache-md.redis.cache.windows.net'),
+            'host' => env('AZURE_REDIS_HOST', '127.0.0.1'),
             'username' => env('REDIS_USERNAME'),
-            'password' => env('AZURE_REDIS_PASSWORD', '@Microsoft.KeyVault(SecretUri=https://keyvault1024369.vault.azure.net/secrets/azure-redis-password-b0d24/b01fda445d754a749bff556d8220bd1f)'),
-            'port' => env('AZURE_REDIS_PORT', '6380'),
-            'database' => env('AZURE_REDIS_DATABASE', '0'),
+            'password' => env('AZURE_REDIS_PASSWORD'),
+            'port' => env('AZURE_REDIS_PORT', '6379'),
+            'database' => env('AZURE_REDIS_DATABASE', '1'),
             'scheme' => 'tls',
         ],
 
